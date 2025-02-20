@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Imágenes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="carrusel">
+        <button class="atras" id="atras">
+            <img src="assets/arrow_back.svg" alt="Atrás">
+        </button>
+
+        <section class="imagenes">
+            <div id="contenedor-imagen">
+                <img class="img" id="imagen" src="assets/image_1.jpg" alt="Imagen 1">
+            </div>
+        </section>
+
+        <button class="adelante" id="adelante">
+            <img src="assets/arrow_forward.svg" alt="Adelante">
+        </button>
+    </main>
+
+    <div class="puntos" id="puntos"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
