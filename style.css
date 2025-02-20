@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #909090;
+}
+
+.carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.85);
+    height: 450px;
+    width: 800px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.img.fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.img.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.atras img, .adelante img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.atras, .adelante {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+.puntos {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.puntos span {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.puntos .activo {
+    background-color: #5E17EB;
+}
+
+.desactivado {
+    filter: opacity(0.5) drop-shadow(0 0 0 hsl(0, 100%, 50%));
+    cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+    .img {
+        height: 350px;
+        width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .img {
+        height: 250px;
+        width: 400px;
+    }
+    .atras, .adelante {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img {
+        height: 200px;
+        width: 300px;
+    }
+    .atras, .adelante {
+        width: 30px;
+        height: 30px;
+    }
+}
